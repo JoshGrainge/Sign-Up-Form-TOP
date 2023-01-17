@@ -2,10 +2,15 @@
     /* Color variables */
     --form-bg: rgb(243, 252, 255);
     --green: rgb(111, 136, 65);
+    --lightgreen: rgb(130, 160, 75);
 
     /* Spacing variables */
     --left-margin: 5%;
     --input-border-width: 2px;
+
+    /* Attribute variables */
+    --shadow: 0 5px 5px 1px #0003;
+
 
     font-family: Helvetica, monospace,  sans-serif;
 }
@@ -76,7 +81,7 @@ body{
 }
 
 .form-description{
-    margin: 10% 15% 5% var(--left-margin);
+    margin: 7% 15% 5% var(--left-margin);
 }
 
 .form-title{
@@ -112,7 +117,10 @@ ul > li{
 }
 
 ul > li > input{
-    height: 2.5em;
+    height: 1rem;
+    padding: 1rem;
+
+    font-size: 1.2rem;
 
     border-radius: 7px;
     border: var(--input-border-width) solid #0003;
@@ -120,6 +128,7 @@ ul > li > input{
 
 input:focus{
     outline: var(--input-border-width) solid rgb(74, 198, 255);
+    box-shadow: var(--shadow);
 }
 
 label{
@@ -131,7 +140,7 @@ label{
     margin-left: var(--left-margin);
     margin-bottom: 1em;
 
-    height: 3.5rem;
+    height: 3rem;
     width: 20%;
 
     color: white;
@@ -141,6 +150,13 @@ label{
     background-color: var(--green);
     border: 0;
     border-radius: 5px;
+
+    box-shadow: var(--shadow);
+}
+
+.submit-button:hover{
+    background-color: var(--lightgreen);
+    cursor: pointer;
 }
 
 .login-text{
