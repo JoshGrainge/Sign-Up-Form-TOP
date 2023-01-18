@@ -10,7 +10,7 @@
 
     /* Attribute variables */
     --shadow: 0 5px 5px 1px #0003;
-
+    --input-border: var(--input-border-width) solid #0003;
 
     font-family: Helvetica, monospace,  sans-serif;
 }
@@ -123,7 +123,11 @@ ul > li > input{
     font-size: 1.2rem;
 
     border-radius: 7px;
-    border: var(--input-border-width) solid #0003;
+    border: var(--input-border);
+}
+
+input:focus:invalid{
+    border: var(--input-border-width) solid red;
 }
 
 input:focus{
@@ -170,4 +174,3 @@ label{
     background-color: transparent;
     text-decoration: none;
 }
-
